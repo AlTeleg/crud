@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.new-post-form {
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.post-full, .post-short {
+  padding: 10px;
+  margin: 20px 10px;
+  border: 1px #3B599A solid;
+  border-radius: 5px;
+  width: 600px;
+  position: relative;
+  list-style: none;
+}
+
+.nav-menu {
+  margin: 10px 10px;
+}
+
+.post-full_managment {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  padding: 5px;
+}
+
+.posts {
+  padding: 0;
+}
+
+.post-short_date {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.post-short_inf_photo {
+  height: 18px;
+}
+
+.post-short_inf {
+  margin: 5px 5px 20px 0px;
+}
+
+.new-post-div {
+  width: 400px;
+  position: relative;
+}
+
+.new-post-div_cross {
+  position: absolute;
+  height: 30px;
+  top: 5px;
+  right: 0;
+}
+
+.new-post-div_input {
+  height: 150px;
+  width: 100%;
+  padding: 10px;
+}
+
+.new-post-div_button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.post-full_managment_edit-button, .posts_button-new {
+  text-decoration: none;
+}
+
+.post-full_managment_edit-button, .post-full_managment_delete-button, .posts_button-new, .new-post-div_button {
+  height: 30px;
+  background-color: #3B599A;
+  color: white;
+  border: white 1px solid;
+  border-radius: 5px;
+  
+}
+
+.post-full_content {
+  width: 100%;
+  text-decoration: none;
+}
+
+.post-full_managment_delete-button {
+  background-color: #B04546;
+}
+
+.nav-menu {
+  color: #3B599A;
+  margin-left: 0;
+}
+
+.nav-menu_link.active {
+  text-decoration: underline;
+}
+
+.nav-menu_link {
+  color: #3B599A;
+  text-decoration: none;
+}
+
+.nav-menu_link:not(:first-child) {
+  margin: 1px 0px 1px 20px;
+}
+
+.post-full_managment_edit-button:hover, .post-full_managment_delete-button:hover, 
+.posts_button-new:hover, .new-post-div_button:hover, .new-post-div_cross:hover {
+  cursor: pointer;
 }

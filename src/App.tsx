@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import Posts from './components/Posts';
+import Post from './components/Post';
+import NewPost from './components/NewPost';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import './App.css';
+import { LOCALHOST } from "./config";
+import EditPost from './components/EditPost';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav className='nav-menu'>
+          <NavLink className='nav-menu_link' end to="/">Главная</NavLink>
+          <NavLink className='nav-menu_link' to="/#" >Фото</NavLink>
+          <NavLink className='nav-menu_link' to="/#" >Музыка</NavLink>
+          <NavLink className='nav-menu_link' to="/#" >Видео</NavLink>
+          <NavLink className='nav-menu_link' to="/#" >Сервисы</NavLink>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Posts serverAddress={LOCALHOST}/>} />
+          <Route path="/posts/new" element={<NewPost serverAddress={LOCALHOST}/>} />
+          <Route path="/posts/:postId" element={<Post serverAddress={LOCALHOST}/>} />
+          <Route path="/posts/:postId/edit" element={<EditPost serverAddress={LOCALHOST}/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
